@@ -1,0 +1,43 @@
+{
+  "project": "WSL Background Programs with BASH",
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Write two programs: the first writes the current time to a log file every 10 seconds, the second reads from the log file and prints the last line every 7 seconds"
+    },
+    {
+      "id": 2,
+      "description": "Grant execution permissions to the scripts",
+      "command": "chmod +x writer.sh reader.sh"
+    },
+    {
+      "id": 3,
+      "description": "Run both scripts in the background",
+      "command": "./writer.sh & ./reader.sh &"
+    },
+    {
+      "id": 4,
+      "description": "Display active jobs",
+      "command": "jobs"
+    },
+    {
+      "id": 5,
+      "description": "Suspend a process temporarily and then send it to the background",
+      "command": "Ctrl+Z then bg %1"
+    },
+    {
+      "id": 6,
+      "description": "Bring a process to the foreground",
+      "command": "fg %2"
+    },
+    {
+      "id": 7,
+      "description": "Terminate the processes",
+      "command": "kill %1 %2 or killall writer.sh reader.sh"
+    },
+    {
+      "id": 8,
+      "description": "Verify output - ensure that reader displays what writer wrote"
+    }
+  ]
+}
