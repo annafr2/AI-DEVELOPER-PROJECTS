@@ -1,0 +1,19 @@
+{
+    "analysis_date": "2025-12-27T22:03:49.953610",
+    "model_used": "gemini-3-flash-preview",
+    "total_videos_analyzed": 1,
+    "results": [
+        {
+            "video_name": "f5.mp4",
+            "is_deepfake": "Low",
+            "fakeness_score": 12,
+            "artifacts": [
+                "None"
+            ],
+            "reasoning": "The video demonstrates high temporal consistency with no visible flickering or morphing. Facial micro-expressions, including subtle forehead movement and eye-narrowing, appear natural and contextually appropriate. Lip-syncing is precise, with realistic tongue and teeth visibility. Skin texture is detailed, showing natural pores and fine lines, and hair edges are sharp against the background. Audio is clear with natural breathing and vocal inflections.",
+            "analysis_time": 8.155259847640991,
+            "timestamp": "2025-12-27T22:03:49.952905",
+            "error": null
+        }
+    ]
+}
