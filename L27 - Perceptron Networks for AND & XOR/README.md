@@ -508,6 +508,38 @@ Epoch 200: Loss: 0.0029 - Accuracy: 100.00%
 - Final MSE: 0.0029 (good!)
 - Decision boundary: Curved, creates 4 separate regions
 
+### Complete Visualization Results
+
+Below are all the generated visualizations showing how the network performs with different noise levels:
+
+#### AND Gate Results
+
+**No Noise (0%):**
+![AND Gate - 0% Noise](and_noise_0.png)
+
+**10% Noise:**
+![AND Gate - 10% Noise](and_noise_10.png)
+
+**20% Noise:**
+![AND Gate - 20% Noise](and_noise_20.png)
+
+**30% Noise:**
+![AND Gate - 30% Noise](and_noise_30.png)
+
+#### XOR Gate Results
+
+**No Noise (0%):**
+![XOR Gate - 0% Noise](xor_noise_0.png)
+
+**10% Noise:**
+![XOR Gate - 10% Noise](xor_noise_10.png)
+
+**20% Noise:**
+![XOR Gate - 20% Noise](xor_noise_20.png)
+
+**30% Noise:**
+![XOR Gate - 30% Noise](xor_noise_30.png)
+
 #### Part 2: Performance with Noise
 
 **AND Gate with Noise:**
@@ -580,19 +612,32 @@ No straight line can separate the 1s from the 0s! You need a curved boundary. Th
 
 When you look at the generated PNG files:
 
-**and_noise_0.png:**
+**AND Gate (No Noise):**
+
+![AND Gate - Clean Data](and_noise_0.png)
+
 - Blue region (output 0) on bottom-left
 - Red region (output 1) on top-right
 - Straight diagonal boundary between them
 - All points correctly classified
 
-**xor_noise_0.png:**
+**XOR Gate (No Noise):**
+
+![XOR Gate - Clean Data](xor_noise_0.png)
+
 - Four regions: two blue, two red
 - Curved, snake-like boundary
 - More complex decision surface
 - Shows why hidden layer is needed
 
-**With Noise (20% example):**
+**AND Gate with 20% Noise:**
+
+![AND Gate - 20% Noise](and_noise_20.png)
+
+**XOR Gate with 20% Noise:**
+
+![XOR Gate - 20% Noise](xor_noise_20.png)
+
 - Data points spread into "clouds"
 - Some points from different classes overlap
 - Network must learn general pattern, not memorize
@@ -661,7 +706,6 @@ Training AND Gate | Perceptrons: 4 | Noise: 0%
   Epoch 50/200 - Loss: 0.1208 - Accuracy: 75.00%
   Epoch 100/200 - Loss: 0.0289 - Accuracy: 100.00%
   ...
-```
 
 Results:
   Final Loss (MSE): 0.0023
