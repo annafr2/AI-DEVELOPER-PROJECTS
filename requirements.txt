@@ -1,33 +1,4 @@
-# Global D25 Requirements - All Projects
-# Data Science and Machine Learning
-numpy>=1.24.0
-scikit-learn>=1.3.0
-matplotlib>=3.7.0
-seaborn>=0.11.0
-pandas>=2.0.0
-
-# NLP and Embeddings
-sentence-transformers>=2.2.0
-gensim>=4.0.0
-
-# API Clients
-anthropic>=0.18.0
-
-# Gmail API
-google-api-python-client>=2.108.0
-google-auth-httplib2>=0.2.0
-google-auth-oauthlib>=1.2.0
-
-# File Handling
-openpyxl>=3.1.2
-
-# MCP Server
-mcp>=1.0.0
-
-# Utilities
-python-dotenv>=1.0.0
-
-# Additional useful packages
-requests>=2.31.0
-jupyter>=1.0.0
-ipython>=8.0.0
+numpy>=1.20.0
+opencv-python>=4.5.0
+matplotlib>=3.3.0
+scipy>=1.7.0
