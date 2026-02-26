@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show tensorflow kagglehub)",
+      "Bash(\"/c/Users/annaf/D25/AI-DEVELOPER-PROJECTS/venv_global/bin/python\" --version)",
+      "Bash(\"/c/Users/annaf/D25/AI-DEVELOPER-PROJECTS/venv_global/bin/pip\" show tensorflow kagglehub seaborn scikit-learn)",
+      "Bash(PYTHON=\"/c/Users/annaf/D25/AI-DEVELOPER-PROJECTS/venv_global/bin/python\")",
+      "Bash(\"$PYTHON\" --version)",
+      "Bash(\"$PYTHON\" -c \"import tensorflow; print\\(''TF:'', tensorflow.__version__\\)\")",
+      "Bash(\"$PYTHON\" -c \"import kagglehub; print\\(''kagglehub OK''\\)\")",
+      "Bash(\"$PYTHON\" -c \"import seaborn; print\\(''seaborn OK''\\)\")",
+      "Bash(PYTHON=\"/c/Users/annaf/D25/AI-DEVELOPER-PROJECTS/venv_global/bin/python3.12\")",
+      "Bash(\"$PYTHON\" -c \"import sklearn; print\\(''sklearn OK''\\)\")",
+      "Bash(/usr/bin/python3.12 --version)",
+      "Bash(/usr/bin/python3.12 -c \"import tensorflow; print\\(''TF:'', tensorflow.__version__\\)\")",
+      "Bash(cmd.exe /c \"where python\")",
+      "Bash(cmd.exe /c \"python --version\")",
+      "Bash(powershell.exe -Command \"Get-Command python -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; Get-Command python3 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; \\(Get-ItemProperty ''HKLM:\\\\SOFTWARE\\\\Python\\\\PythonCore\\\\*\\\\InstallPath'' -ErrorAction SilentlyContinue\\).ExecutablePath\")",
+      "Bash(powershell.exe -Command \":*)",
+      "Bash(echo $PATH)",
+      "Bash(printenv PATH)",
+      "Bash(wsl.exe --list --running)",
+      "Bash(wsl.exe python3 --version)",
+      "Bash(wsl.exe which python3)",
+      "Bash(wsl.exe python3 -c \"import tensorflow; print\\(''TF:'', tensorflow.__version__\\)\")",
+      "Bash(wsl.exe python3 -c \"import kagglehub; print\\(''kagglehub OK''\\)\")",
+      "Bash(wsl.exe python3 -c \"import seaborn; print\\(''seaborn OK''\\)\")",
+      "Bash(wsl.exe python3 -c \"import sklearn; print\\(''sklearn OK''\\)\")",
+      "Bash(wsl.exe bash -c \"ls ~/.local/lib/python3.12/site-packages/ 2>/dev/null | grep -E ''tensor|keras|sklearn|kaggle|seaborn|PIL'' | head -20\")",
+      "Bash(wsl.exe bash -c \"cd ''/mnt/c/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L42 - classify images with'' && pip install tensorflow kagglehub seaborn scikit-learn matplotlib Pillow -q 2>&1 | tail -5\")",
+      "Bash(wsl.exe bash -c \"python3 -m pip install tensorflow kagglehub seaborn scikit-learn matplotlib Pillow 2>&1 | tail -10\")",
+      "Bash(wsl.exe bash -c \"python3 -m venv /tmp/hcp_venv && /tmp/hcp_venv/bin/pip install tensorflow kagglehub seaborn scikit-learn matplotlib Pillow 2>&1 | tail -5\")"
+    ]
+  }
+}

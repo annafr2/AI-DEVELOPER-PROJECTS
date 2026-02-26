@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(C:ffmpegbinffmpeg.exe -f lavfi -i testsrc=duration=10:size=640x480:rate=30 -f lavfi -i sine=frequency=440:duration=10 -c:v libx264 -preset medium -crf 23 -c:a aac -shortest \"C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG\\\\sample_video.mp4\" -y)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe -Command \"& ''C:\\\\ffmpeg\\\\bin\\\\ffmpeg.exe'' -version 2>&1 | Select-Object -First 5\")",
+      "Bash(powershell.exe -Command \"& ''C:\\\\ffmpeg\\\\bin\\\\ffmpeg.exe'' -f lavfi -i ''testsrc=duration=10:size=640x480:rate=30'' -f lavfi -i ''sine=frequency=440:duration=10'' -c:v libx264 -preset medium -crf 23 -c:a aac -shortest ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG\\\\sample_video.mp4'' -y 2>&1 | Select-Object -Last 10\")",
+      "Bash(powershell.exe -Command \"Test-Path ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG\\\\sample_video.mp4''\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG''; python video_analyzer.py 2>&1\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG''; python macroblock_visualizer.py 2>&1\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG''; python compression_experiment.py 2>&1\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\D25\\\\AI-DEVELOPER-PROJECTS\\\\L35 - video compress FFMPEG''; python visualization.py 2>&1\")",
+      "Bash(powershell.exe:*)"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+============================================================
+VIDEO ANALYSIS REPORT
+============================================================
+File: sample_video.mp4
+Format: QuickTime / MOV
+Duration: 10.00 seconds
+Total Bitrate: 126 kbps
+File Size: 154.2 KB
+
+--- VIDEO STREAM ---
+Codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+Resolution: 640x480
+FPS: 30/1
+Pixel Format: yuv444p
+Profile: High 4:4:4 Predictive
+Level: 30
+
+--- FRAME ANALYSIS ---
+Total Frames: 300
+  I-frames: 2 (0.7%) avg size: 5744 bytes
+  P-frames: 76 (25.3%) avg size: 419 bytes
+  B-frames: 222 (74.0%) avg size: 70 bytes
+
+--- GOP STRUCTURE ---
+Number of GOPs: 2
+Average GOP size: 150.0 frames
+Min GOP: 50, Max GOP: 250
+First 10 GOP sizes: [250, 50]
+============================================================

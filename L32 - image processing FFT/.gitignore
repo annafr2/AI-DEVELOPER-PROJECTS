@@ -1,0 +1,16 @@
+# Credentials and tokens
+credentials.json
+token.pickle
+*.pickle
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.egg-info/
+
+# Excel files with potentially sensitive data
+emails_*.xlsx
+linkedin_emails_*.xlsx
+venv_global/
