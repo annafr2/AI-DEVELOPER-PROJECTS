@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p outputs)",
+      "Bash(python -c \"from config import *; from environment import DroneEnv; from agent import QLearningAgent; from train import train; print\\(''All imports OK''\\)\")",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
