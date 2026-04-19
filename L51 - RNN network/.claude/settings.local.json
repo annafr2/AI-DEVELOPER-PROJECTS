@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l *.py)",
+      "Bash(python -c ':*)",
+      "Bash(/c/Users/annaf/D25/venv_global/Scripts/python -c ':*)",
+      "Bash(python3 -c \"import torch; print\\(torch.__version__\\)\")",
+      "Bash(cmd.exe /c \"where python\")",
+      "Bash(cmd.exe /c \"where python3\")",
+      "Bash(cmd.exe /c \"py --version\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Python* /b 2>nul & dir C:\\\\Users\\\\annaf\\\\AppData\\\\Local\\\\Programs\\\\Python /b 2>nul & dir C:\\\\Users\\\\annaf\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python*.exe /b 2>nul\")",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Users\\\\annaf\\\\AppData\\\\Local\\\\\" /b 2>nul\")",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Users\\\\annaf\\\\AppData\\\\Local\\\\Programs\\\\\" /b 2>nul\")",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Program Files\\\\Git\\\\bin\\\\\" /b 2>nul\")",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Program Files\\\\Python*\\\\\" /b 2>nul\")"
+    ]
+  }
+}
