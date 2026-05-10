@@ -39,16 +39,16 @@ class DuelingDQN(nn.Module):
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = x.view(x.size(0), -1)          # flatten window
+        x = x.reshape(x.size(0), -1)
         features   = self.encoder(x)
-        value      = self.value_stream(features)           # (B, 1)
-        advantage  = self.advantage_stream(features)       # (B, A)
+        value      = self.value_stream(features)
+        advantage  = self.advantage_stream(features)
         q = value + advantage - advantage.mean(dim=1, keepdim=True)
         return q
 
     def value_advantage(self, x: torch.Tensor):
         """Return (value, advantage) tensors — used for visualisation."""
-        x = x.view(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)
         features  = self.encoder(x)
         value     = self.value_stream(features)
         advantage = self.advantage_stream(features)

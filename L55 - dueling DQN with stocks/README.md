@@ -65,46 +65,62 @@ A **Gatekeeper** limits requests to 10/minute and 100/hour to be respectful of Y
 
 ## Results — SMH (AI Infrastructure ETF)
 
-### Candlestick Chart
-> Daily price bars for SMH. Green = price went up that day. Red = went down.
-
-*(Run the project to generate `outputs/SMH_candlesticks.png`)*
-
+### Chart 1 — Candlestick Chart
 ![Candlesticks](outputs/SMH_candlesticks.png)
 
+Each vertical bar in this chart is **one trading day** of SMH.
+- **Green bar** = the price went UP that day (closed higher than it opened)
+- **Red bar** = the price went DOWN that day (closed lower than it opened)
+- The thin line above and below each bar shows the highest and lowest price of the day
+
+This is the raw data the AI learns from. You can see how SMH grew strongly from 2020 to 2021, then dropped in 2022, and recovered in 2023–2024 — driven by the AI chip boom (NVIDIA etc.).
+
 ---
 
-### Value and Advantage Decomposition
-> The Dueling DQN's two streams visualised for the last state in the test period.
-> Left bar = how good the state is overall. Right bars = which action adds the most value.
-
+### Chart 2 — Value & Advantage Decomposition
 ![Value Advantage](outputs/SMH_value_advantage.png)
 
+This chart opens the "brain" of the Dueling DQN and shows its two separate parts:
+
+- **Left bar — V(s) "Value"**: How good is the current market situation overall? A high positive number means the AI thinks conditions are favorable, regardless of what action it takes.
+- **Right bars — A(s,a) "Advantage"**: For each possible action (Hold, Buy, Sell), how much better or worse is it compared to the average? The tallest bar is the action the AI prefers right now.
+
+Together they give the final decision: **Q = V + A − mean(A)**
+
 ---
 
-### Training Curves
-> Left: total reward per episode. Middle: % return per episode on training data.
-> Right: % return every 10 episodes on the validation set (unseen during training).
+### Chart 3 — Portfolio vs Buy & Hold (Streamlit live view)
+![Portfolio Streamlit](outputs/צילום%20מסך%202026-05-10%20191057.png)
 
-![Training Curves](outputs/SMH_training_curves.png)
+This is the **live interactive result** from the Streamlit dashboard.
+- **Blue line (DQN Agent)** — the AI agent's portfolio value over the test period, starting from $10,000
+- **Orange dashed line (Buy & Hold)** — what would have happened if you just bought SMH once and held it
+
+When the blue line is **above** the orange line, the AI is outperforming a passive investment strategy. The AI learned to avoid some of the big drops by selling in time and buying back at lower prices.
 
 ---
 
-### Portfolio vs Buy-and-Hold
-> The blue line is the agent's portfolio value on the test set (data it never trained on).
-> The orange dashed line is what you would have earned just buying and holding SMH.
-
+### Chart 4 — Portfolio vs Buy & Hold (static PNG)
 ![Portfolio](outputs/SMH_portfolio.png)
+
+Same comparison as above but saved as a static PNG from `main.py`.
+The test period covers the last 15% of the data — price bars the AI **never saw during training**.
+This is the true test of whether the AI learned real patterns or just memorized the training data.
 
 ---
 
 ## Interactive Dashboard
 
-When you run `python main.py`, an interactive window opens:
+Run the Streamlit web dashboard — opens in your browser:
+
+```bash
+streamlit run app.py
+```
 
 - Type any **ticker** (e.g. `NVDA`, `AAPL`, `QQQ`, `SMH`)
 - Set a **start** and **end** date
-- Click **Run** — the dashboard fetches data, loads the trained model, and draws all panels live
+- Follow the buttons in order: **Prepare Data → Train Model → Run Backtest → Predict Next**
+- See candlesticks, portfolio chart, Value & Advantage bars, and a BUY / SELL / HOLD prediction
 
 ---
 
@@ -118,12 +134,13 @@ L55 - dueling DQN with stocks/
 ├── environment.py     Trading simulation (buy/sell/hold + reward)
 ├── model.py           Dueling DQN neural network (PyTorch)
 ├── agent.py           Replay buffer, epsilon-greedy policy, learn step
-├── train.py           Training loop — 300 episodes, save best model
+├── train.py           Training loop — save best model
 ├── visualize.py       Save PNG charts to outputs/
-├── dashboard.py       Interactive matplotlib GUI
-├── main.py            Run everything from the command line
+├── app.py             Streamlit web dashboard (main entry point)
+├── charts.py          Plotly chart builders for the dashboard
+├── main.py            Command-line entry point (train + save PNGs)
 ├── requirements.txt   Python packages needed
-└── outputs/           Auto-created folder for PNG results and saved models
+└── outputs/           PNG results + saved models (SMH_best.pt)
 ```
 
 ---
