@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import ast, glob; [ast.parse\\(open\\(f\\).read\\(\\)\\) or print\\(f'OK: {f}'\\) for f in glob.glob\\('*.py'\\)]\")",
+      "Bash(python -c ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -C \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227\" ls-files \"L55 - dueling DQN with stocks/\")",
+      "Bash(git -C \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227\" branch)",
+      "Bash(git -C \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227\" show --stat HEAD)",
+      "Bash(git -C \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227\" ls-files)",
+      "Bash(git -C \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227\" rev-parse --show-toplevel)",
+      "Bash(ls \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/\" && echo \"---REAL FOLDER---\")",
+      "Bash(cp \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227/L55 - dueling DQN with stocks/app.py\" \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/app.py\")",
+      "Bash(cp \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/.claude/worktrees/naughty-bouman-701227/L55 - dueling DQN with stocks/charts.py\" \"C:/Users/annaf/D25/AI-DEVELOPER-PROJECTS/L55 - dueling DQN with stocks/charts.py\")"
+    ]
+  }
+}
